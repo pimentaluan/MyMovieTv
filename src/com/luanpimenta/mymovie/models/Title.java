@@ -1,8 +1,8 @@
-package com.luanpimenta.mymovie.model;
+package com.luanpimenta.mymovie.models;
 
 import java.time.LocalDate;
 
-public class Movie {
+public class Title {
     private String name;
     private int releaseYear;
     private boolean includesOnPlan;
@@ -13,11 +13,11 @@ public class Movie {
     public void showTechnicalDataSheet(){
         System.out.printf("""
                 Nome: %s
-                Data lançamento: %d
+                Data lançamento: %s
                 Incluso: %b
                 Média avaliações: %.1f
                 Duração (minutos): %d
-                """, name, releaseYear, includesOnPlan, ratingAverage(), durationInMinutes);
+                """, getName(), getReleaseYear(), includesOnPlan, ratingAverage(), getDurationInMinutes());
     }
 
     public int getRatingTotal(){
@@ -74,4 +74,5 @@ public class Movie {
     public double ratingAverage(){
         return ratingSum / ratingTotal;
     }
+
 }
