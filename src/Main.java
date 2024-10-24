@@ -1,4 +1,6 @@
+import com.luanpimenta.mymovie.calculations.RecommendationFilter;
 import com.luanpimenta.mymovie.calculations.TimeCalculator;
+import com.luanpimenta.mymovie.models.Episode;
 import com.luanpimenta.mymovie.models.Movie;
 import com.luanpimenta.mymovie.models.Tv;
 
@@ -16,6 +18,7 @@ public class Main {
         meuFilme.rate(6);
         meuFilme.showTechnicalDataSheet();
         System.out.printf("Diretor: %s %n", meuFilme.getDirector());
+        System.out.println(meuFilme.getClassification());
 
         Movie meuFilme2 = new Movie();
         meuFilme2.setDurationInMinutes(100);
@@ -34,9 +37,9 @@ public class Main {
         minhaSerie.setEpisodesForSeason(8);
         minhaSerie.setMinutesForEpisode(60);
         minhaSerie.setIsActive(false);
-        minhaSerie.rate(4);
-        minhaSerie.rate(4.4);
-        minhaSerie.rate(4.5);
+        minhaSerie.rate(8);
+        minhaSerie.rate(8.8);
+        minhaSerie.rate(9);
 
         minhaSerie.showTechnicalDataSheet();
         System.out.println("""
@@ -44,6 +47,17 @@ public class Main {
                 Episódios por temporada: %d
                 Está ativa: %b
                 """.formatted(minhaSerie.getSeasons(), minhaSerie.getEpisodesForSeason(), minhaSerie.getIsActive()));
+
+        //Class episode
+        Episode meuEpisodio = new Episode();
+        meuEpisodio.setNumber(1);
+        meuEpisodio.setName("Episódio 1");
+        meuEpisodio.setTv(minhaSerie);
+        meuEpisodio.setTotalVisualisation(200);
+        System.out.println("Classificação: " + meuEpisodio.getClassification());
+
+        RecommendationFilter filtroRecomendacao = new RecommendationFilter();
+        filtroRecomendacao.filter(meuEpisodio);
 
 
         TimeCalculator calculator = new TimeCalculator();

@@ -1,5 +1,7 @@
 package com.luanpimenta.mymovie.models;
 
+import com.luanpimenta.mymovie.calculations.Classification;
+
 public class Tv extends Title {
     private int seasons;
     private int episodesForSeason;
