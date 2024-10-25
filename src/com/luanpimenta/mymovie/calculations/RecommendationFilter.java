@@ -6,7 +6,7 @@ public class RecommendationFilter {
         if (classification.getClassification() >=4 ){
             System.out.println("Está entre os preferidos do momento!");
         }else if (classification.getClassification() >= 2){
-            System.out.println("Bem avaliado no momento!");
+            System.out.println("Bem avaliado!");
         }else{
             System.out.println("Assista depois!");
         }

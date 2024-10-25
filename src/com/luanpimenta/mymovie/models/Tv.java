@@ -2,7 +2,7 @@ package com.luanpimenta.mymovie.models;
 
 import com.luanpimenta.mymovie.calculations.Classification;
 
-public class Tv extends Title {
+public class Tv extends Title implements Classification{
     private int seasons;
     private int episodesForSeason;
     private int minutesForEpisode;
@@ -43,5 +43,10 @@ public class Tv extends Title {
     @Override
     public int getDurationInMinutes() {
         return seasons * episodesForSeason * minutesForEpisode;
+    }
+
+    @Override
+    public int getClassification() {
+        return ((int) ratingAverage())/2;
     }
 }
