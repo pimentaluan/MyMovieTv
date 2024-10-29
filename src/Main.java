@@ -66,6 +66,7 @@ public class Main {
         maratonaDeFilmes.add(starWars);
         System.out.println("Tamnaho da maratona: " + maratonaDeFilmes.size());
         System.out.println("Primeiro filme: " + maratonaDeFilmes.getFirst().getName());
+        System.out.println(maratonaDeFilmes);
 
 
         // ======================= TV SHOW: Dark =======================
