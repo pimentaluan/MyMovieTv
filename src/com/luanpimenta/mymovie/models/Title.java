@@ -10,6 +10,7 @@ public class Title {
     private int ratingTotal;
     private int durationInMinutes;
 
+
     public void showTechnicalDataSheet(){
         System.out.printf("""
                 Nome: %s
