@@ -76,4 +76,9 @@ public class Title {
         return ratingSum / ratingTotal;
     }
 
+    @Override
+    public String toString(){
+        return "Filme: %s (%s)".formatted(this.getName(), this.getReleaseYear());
+    }
+
 }
