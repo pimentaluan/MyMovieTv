@@ -8,6 +8,10 @@ public class Tv extends Title implements Classification{
     private int minutesForEpisode;
     private boolean isActive;
 
+    public Tv(String name, int releaseYear) {
+        super(name, releaseYear);
+    }
+
     public int getSeasons(){
         return seasons;
     }
@@ -48,5 +52,10 @@ public class Tv extends Title implements Classification{
     @Override
     public int getClassification() {
         return ((int) ratingAverage())/2;
+    }
+
+    @Override
+    public String toString() {
+        return "Série: %s (%s)".formatted(this.getName(), this.getReleaseYear());
     }
 }

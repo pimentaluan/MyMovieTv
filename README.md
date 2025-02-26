@@ -21,7 +21,7 @@ Este projeto foi desenvolvido durante meus estudos de Java pela Alura. É uma ap
    git clone https://github.com/pimentaluan/MyMovieTv.git
    ```
 
-2. Execute o arquivo `Main.java` na sua IDE de preferência.
+2. Execute o arquivo `com.luanpimenta.mymovie.main.Main.java` na sua IDE de preferência.
 
 ## Licença
 

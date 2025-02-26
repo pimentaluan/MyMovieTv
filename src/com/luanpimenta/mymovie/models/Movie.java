@@ -5,8 +5,8 @@ import com.luanpimenta.mymovie.calculations.Classification;
 public class Movie extends Title implements Classification {
     private String director;
 
-    public Movie(String name){
-        this.setName(name);
+    public Movie(String name, int releaseYear) {
+        super(name, releaseYear);
     }
 
     public String getDirector(){
@@ -24,6 +24,6 @@ public class Movie extends Title implements Classification {
 
     @Override
     public String toString() {
-        return this.getName();
+        return "Filme: %s (%s)".formatted(this.getName(), this.getReleaseYear());
     }
 }

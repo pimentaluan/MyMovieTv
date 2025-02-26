@@ -10,6 +10,10 @@ public class Title {
     private int ratingTotal;
     private int durationInMinutes;
 
+    public Title(String name, int releaseYear){
+        this.setName(name);
+        this.setReleaseYear(releaseYear);
+    }
 
     public void showTechnicalDataSheet(){
         System.out.printf("""
@@ -78,7 +82,7 @@ public class Title {
 
     @Override
     public String toString(){
-        return "Filme: %s (%s)".formatted(this.getName(), this.getReleaseYear());
+        return "Título: %s (%s)".formatted(this.getName(), this.getReleaseYear());
     }
 
 }
