@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Anora",
+    "ReleaseYear": 2024,
+    "IncludesOnPlan": false,
+    "RatingSum": 0.0,
+    "RatingTotal": 0,
+    "DurationInMinutes": 139
+  },
+  {
+    "Name": "Conclave",
+    "ReleaseYear": 2024,
+    "IncludesOnPlan": false,
+    "RatingSum": 0.0,
+    "RatingTotal": 0,
+    "DurationInMinutes": 120
+  },
+  {
+    "Name": "Coco",
+    "ReleaseYear": 2017,
+    "IncludesOnPlan": false,
+    "RatingSum": 0.0,
+    "RatingTotal": 0,
+    "DurationInMinutes": 105
+  }
+]

@@ -25,7 +25,7 @@ public class Title {
                     "porque tem mais de 04 caracteres.");
         }
         this.releaseYear = Integer.valueOf(meuTituloOmdb.year());
-        this.durationInMinutes = Integer.valueOf(meuTituloOmdb.runtime().substring(0, 2));
+        this.durationInMinutes = Integer.valueOf(meuTituloOmdb.runtime().substring(0, 3));
     }
 
     public void showTechnicalDataSheet(){
@@ -95,7 +95,7 @@ public class Title {
 
     @Override
     public String toString(){
-        return "Título: %s (%s)".formatted(this.getName(), this.getReleaseYear());
+        return "Título:" + this.name + " (" + this.releaseYear + (") - " + this.durationInMinutes + "min" );
     }
 
 }
