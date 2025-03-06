@@ -1,5 +1,7 @@
 package com.luanpimenta.mymovie.models;
 
+import com.luanpimenta.mymovie.exceptions.ConvertYearException;
+
 import java.time.LocalDate;
 
 public class Title {
@@ -13,6 +15,17 @@ public class Title {
     public Title(String name, int releaseYear){
         this.setName(name);
         this.setReleaseYear(releaseYear);
+    }
+
+    public Title(TitleOmdb meuTituloOmdb) {
+        this.name = meuTituloOmdb.title();
+
+        if(meuTituloOmdb.year().length() > 4) {
+            throw new ConvertYearException("Não consegui converter o ano " +
+                    "porque tem mais de 04 caracteres.");
+        }
+        this.releaseYear = Integer.valueOf(meuTituloOmdb.year());
+        this.durationInMinutes = Integer.valueOf(meuTituloOmdb.runtime().substring(0, 2));
     }
 
     public void showTechnicalDataSheet(){
